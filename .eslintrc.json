@@ -3,7 +3,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": [],
+
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -12,5 +12,6 @@
     "sourceType": "module"
   },
   "plugins": ["react", "prettier"],
-  "rules": { "prettier/prettier": "warn" }
+  "rules": { "prettier/prettier": "warn" },
+  "extends": "react-app"
 }
