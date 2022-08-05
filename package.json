@@ -57,8 +57,8 @@
     ]
   },
   "description": "Personal site created with React and Chakra UI",
-  "repository": "https://github.com/deniserdogan/denisdev.git",
-  "author": "Deniz Erdogan",
+  "repository": "",
+  "author": "",
   "license": "MIT",
   "devDependencies": {
     "eslint-plugin-prettier": "^4.2.1",
