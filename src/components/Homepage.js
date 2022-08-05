@@ -1,8 +1,8 @@
 import React from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
 import theme from '../theme'
-import Nav from './Nav';
-import Header from './Header';
+import Nav from './Nav'
+import Header from './Header'
 function Homepage() {
   const stars = () => {
     const row = []
