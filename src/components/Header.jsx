@@ -38,6 +38,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 export default function Header() {
+  const color = useColorModeValue('#151f21', 'gray.900')
   const [HomePageData, setHomePageData] = useState({})
   const [collegeData, setCollegeData] = useState({})
   const [projects, setProjects] = useState([])
@@ -45,7 +46,7 @@ export default function Header() {
   const [links, setLinks] = useState([])
   useEffect(() => {
     axios
-      .post('http://localhost:5000/api/homepage/get/data', {
+      .post('https://portifybackend.herokuapp.com/api/homepage/get/data', {
         findid: localStorage.getItem('userinfo'),
       })
       .then(result => {
@@ -56,7 +57,7 @@ export default function Header() {
         console.log(err)
       })
     axios
-      .post('http://localhost:5000/api/projects/get', {
+      .post('https://portifybackend.herokuapp.com/api/projects/get', {
         findid: localStorage.getItem('userinfo'),
       })
       .then(result => {
@@ -66,7 +67,7 @@ export default function Header() {
         console.log(err)
       })
     axios
-      .post('http://localhost:5000/api/experience/get', {
+      .post('https://portifybackend.herokuapp.com/api/experience/get', {
         findid: localStorage.getItem('userinfo'),
       })
       .then(result => {
@@ -76,7 +77,7 @@ export default function Header() {
         console.log(err)
       })
     axios
-      .post('http://localhost:5000/api/links/get', {
+      .post('https://portifybackend.herokuapp.com/api/links/get', {
         findid: localStorage.getItem('userinfo'),
       })
       .then(result => {
@@ -227,7 +228,7 @@ export default function Header() {
                   <Box
                     maxW={'400px'}
                     w={'full'}
-                    bg={useColorModeValue('white', 'gray.800')}
+                    bg={color}
                     boxShadow={'2xl'}
                     rounded={'md'}
                     overflow={'hidden'}
@@ -254,7 +255,7 @@ export default function Header() {
                       <Button
                         w={'full'}
                         mt={8}
-                        bg={useColorModeValue('#151f21', 'gray.900')}
+                        bg={color}
                         color={'white'}
                         rounded={'md'}
                         _hover={{
